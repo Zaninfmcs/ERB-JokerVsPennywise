@@ -1,0 +1,1710 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERB: The The Joker vs Pennywise - Definitive analysis &#8212; My Jupyter Book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-2 bd-sidebar site-navigation show single-page" id="site-navigation">
+    
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Joker_vs_Pennywise_Final2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Joker_vs_Pennywise_Final2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   ERB: The
+   <font color="purple">
+    <strong>
+     The Joker
+    </strong>
+   </font>
+   vs
+   <font color="red">
+    <strong>
+     Pennywise
+    </strong>
+   </font>
+   - Definitive analysis
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initial-tallying-of-supportive-comments-for-font-color-purple-the-joker-font-and-font-color-red-pennywise-font">
+     Initial tallying of supportive comments for
+     <font color="purple">
+      <strong>
+       The Joker
+      </strong>
+     </font>
+     and
+     <font color="red">
+      <strong>
+       Pennywise
+      </strong>
+     </font>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#so-far-font-color-purple-the-joker-font-is-in-the-lead-with-1-274-supportive-comments-vs-785-for-font-color-red-pennywise-font">
+       So far,
+       <font color="purple">
+        <strong>
+         The Joker
+        </strong>
+       </font>
+       is in the lead with 1,274 supportive comments vs 785 for
+       <font color="red">
+        <strong>
+         Pennywise
+        </strong>
+       </font>
+       .
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-won">
+   WHO WON?!
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#font-color-purple-the-joker-won-font">
+     <font color="purple">
+      <strong>
+       The Joker Won
+      </strong>
+     </font>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#next-we-can-look-at-how-many-upvotes-these-comments-have">
+       Next we can look at how many upvotes these comments have.
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-font-color-purple-the-joker-font-comments-received-substantially-more-upvotes-than-font-color-red-pennywise-font-comments">
+     The
+     <font color="purple">
+      <strong>
+       The Joker
+      </strong>
+     </font>
+     comments received substantially more upvotes than
+     <font color="red">
+      <strong>
+       Pennywise
+      </strong>
+     </font>
+     comments
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-s-next">
+   WHO’S NEXT?!
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#based-on-this-batman-is-the-most-popular-contestant-br">
+     Based on this, Batman is the most popular contestant.
+     <br/>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="erb-the-font-color-purple-the-joker-font-vs-font-color-red-pennywise-font-definitive-analysis">
+<h1>ERB: The <font color=purple><strong>The Joker</strong></font> vs <font color=red><strong>Pennywise</strong></font> - Definitive analysis<a class="headerlink" href="#erb-the-font-color-purple-the-joker-font-vs-font-color-red-pennywise-font-definitive-analysis" title="Permalink to this headline">¶</a></h1>
+<p>Following up from an earlier attempt at an ERB comment section analysis markdown for this video: <a class="reference external" href="https://www.youtube.com/watch?v=R2WxaeIJcqY">https://www.youtube.com/watch?v=R2WxaeIJcqY</a></p>
+<p>I’ve now been able to download all of the comments to date (06-2021). Which is nearly 96K comments. <br>
+A far-cry more than the mere fraction 1%/2,100 comments I worked with earlier for this video.
+<br>
+I would now like to present the updated analysis of ERB’s <font color=purple><strong>The Joker</strong></font> vs <font color=red><strong>Pennywise</strong></font> rap battle.
+<strong>Who (actually) won?</strong>
+<br>
+As a bonus, I look into <em>who’s next</em>. I investigate using the comments, who you wanted to be the next combatants in a future ERB video.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="kn">import</span> <span class="nn">pyreadr</span>
+
+<span class="c1"># import the data from an RDS file </span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">pyreadr</span><span class="o">.</span><span class="n">read_r</span><span class="p">(</span><span class="s1">&#39;/Users/s1756562/Joker_versus_Pennywise_96K.rds&#39;</span><span class="p">)</span>
+<span class="n">JvP_df</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="kc">None</span><span class="p">]</span> 
+<span class="c1"># head &amp; tail Joker vs Pennywise dataframe</span>
+<span class="n">JvP_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Comment</th>
+      <th>Author</th>
+      <th>Posted</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>The guy playing Joker really nailed it</td>
+      <td>TheRedGlint4427</td>
+      <td>2 days ago</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>I don't know why but I really love the deliver...</td>
+      <td>TheRedGlint4427</td>
+      <td>2 days ago</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>I would be ok if Peter legit played a Joker. P...</td>
+      <td>Knuckles The Echidna</td>
+      <td>1 day ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Do Spider-Man vs green goblin</td>
+      <td>BB gaming channel</td>
+      <td>1 day ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>In my opinion Pennywise took the win with his ...</td>
+      <td>DWYDTFALLOUT GAMING</td>
+      <td>1 day ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>95922</td>
+      <td>Yes!?!?! Moorrrreeee</td>
+      <td>Sully Shaheed</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>95923</td>
+      <td>10 views 35 likes? Ok</td>
+      <td>Bacon Danglers</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>95924</td>
+      <td>Awesome as always!!!</td>
+      <td>Shai Demri</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>95925</td>
+      <td>No one cares</td>
+      <td>Nooby Natter</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>95926</td>
+      <td>Nah m8 ur 2nd .w.</td>
+      <td>Ton Ton</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>95927 rows × 4 columns</p>
+</div></div></div>
+</div>
+<div class="section" id="initial-tallying-of-supportive-comments-for-font-color-purple-the-joker-font-and-font-color-red-pennywise-font">
+<h2>Initial tallying of supportive comments for <font color=purple><strong>The Joker</strong></font> and <font color=red><strong>Pennywise</strong></font><a class="headerlink" href="#initial-tallying-of-supportive-comments-for-font-color-purple-the-joker-font-and-font-color-red-pennywise-font" title="Permalink to this headline">¶</a></h2>
+<p>Firstly we look for comments which simply answered the question ‘Who won?’.<br>
+We look for exact matches in the comments for both  <font color=purple><strong>The Joker</strong></font> and <font color=red><strong>Pennywise</strong></font>, no reasons or arguments for the choice.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># subset the Comment column of the dataframe</span>
+<span class="n">JvP_comments</span> <span class="o">=</span> <span class="n">JvP_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Joker words</span>
+<span class="n">JK_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;joker&#39;</span><span class="p">,</span><span class="s1">&#39;Joker&#39;</span><span class="p">,</span><span class="s1">&#39;The joker&#39;</span><span class="p">,</span><span class="s1">&#39;The Joker&#39;</span><span class="p">,</span><span class="s1">&#39;the joker&#39;</span><span class="p">,</span><span class="s1">&#39;the Joker&#39;</span><span class="p">,</span><span class="s1">&#39;joker.&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Joker.&#39;</span><span class="p">,</span><span class="s1">&#39;The joker.&#39;</span><span class="p">,</span><span class="s1">&#39;The Joker.&#39;</span><span class="p">,</span><span class="s1">&#39;the joker.&#39;</span><span class="p">,</span><span class="s1">&#39;the Joker.&#39;</span><span class="p">]</span>
+<span class="c1"># search for comments supportive only of the joker. </span>
+<span class="n">JK_rows</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">JK_words</span><span class="p">:</span>
+    <span class="n">tmp</span><span class="o">=</span><span class="n">JvP_df</span><span class="p">[</span><span class="n">JvP_df</span><span class="p">[</span><span class="s1">&#39;Comment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">word</span><span class="p">]</span>
+    <span class="n">tmp</span><span class="o">=</span><span class="n">tmp</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">JK_rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+    
+<span class="c1"># concatenate indexes of all comments which contain the Joker support words</span>
+<span class="n">JK_rows</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">JK_rows</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># View what it looks like in the comment column </span>
+<span class="n">JvP_comments</span><span class="p">[</span><span class="n">JK_rows</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>418           joker
+1078          joker
+1781          joker
+2181          joker
+2228          joker
+            ...    
+86093        Joker.
+89958        Joker.
+60678    The joker.
+83404    The joker.
+62133    The Joker.
+Name: Comment, Length: 1274, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cross-tabulate these results</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">JvP_comments</span><span class="p">[</span><span class="n">JK_rows</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">margins</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>col_0</th>
+      <th>Count</th>
+      <th>All</th>
+    </tr>
+    <tr>
+      <th>Comment</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Joker</td>
+      <td>1020</td>
+      <td>1020</td>
+    </tr>
+    <tr>
+      <td>Joker.</td>
+      <td>36</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>The Joker</td>
+      <td>28</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>The Joker.</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>The joker</td>
+      <td>34</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>The joker.</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>joker</td>
+      <td>143</td>
+      <td>143</td>
+    </tr>
+    <tr>
+      <td>the Joker</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>the joker</td>
+      <td>9</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>All</td>
+      <td>1274</td>
+      <td>1274</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Repeat the same process for Pennywise</span>
+<span class="n">PW_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Pennywise&#39;</span><span class="p">,</span><span class="s1">&#39;pennywise&#39;</span><span class="p">,</span><span class="s1">&#39;Penny wise&#39;</span><span class="p">,</span><span class="s1">&#39;penny wise&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;IT&#39;</span><span class="p">,</span><span class="s1">&#39;Pennywise.&#39;</span><span class="p">,</span><span class="s1">&#39;pennywise.&#39;</span><span class="p">,</span><span class="s1">&#39;Penny wise.&#39;</span><span class="p">,</span><span class="s1">&#39;penny wise.&#39;</span><span class="p">,</span><span class="s1">&#39;IT.&#39;</span><span class="p">]</span>
+<span class="n">PW_rows</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">PW_words</span><span class="p">:</span>
+    <span class="n">tmp</span><span class="o">=</span><span class="n">JvP_df</span><span class="p">[</span><span class="n">JvP_df</span><span class="p">[</span><span class="s1">&#39;Comment&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">word</span><span class="p">]</span>
+    <span class="n">tmp</span><span class="o">=</span><span class="n">tmp</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">PW_rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+
+<span class="n">PW_rows</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">PW_rows</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">JvP_comments</span><span class="p">[</span><span class="n">PW_rows</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>53         Pennywise
+167        Pennywise
+199        Pennywise
+345        Pennywise
+433        Pennywise
+            ...     
+89221     Pennywise.
+94051     Pennywise.
+2821      pennywise.
+51957    Penny wise.
+86912    Penny wise.
+Name: Comment, Length: 785, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cross-tabulate Pennywise supportive comments </span>
+<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">JvP_comments</span><span class="p">[</span><span class="n">PW_rows</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">margins</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>col_0</th>
+      <th>Count</th>
+      <th>All</th>
+    </tr>
+    <tr>
+      <th>Comment</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IT</td>
+      <td>42</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td>Penny wise</td>
+      <td>80</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>Penny wise.</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Pennywise</td>
+      <td>547</td>
+      <td>547</td>
+    </tr>
+    <tr>
+      <td>Pennywise.</td>
+      <td>12</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>penny wise</td>
+      <td>11</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>pennywise</td>
+      <td>90</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>pennywise.</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>All</td>
+      <td>785</td>
+      <td>785</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="section" id="so-far-font-color-purple-the-joker-font-is-in-the-lead-with-1-274-supportive-comments-vs-785-for-font-color-red-pennywise-font">
+<h3>So far, <font color=purple><strong>The Joker</strong></font> is in the lead with 1,274 supportive comments vs 785 for <font color=red><strong>Pennywise</strong></font>.<a class="headerlink" href="#so-far-font-color-purple-the-joker-font-is-in-the-lead-with-1-274-supportive-comments-vs-785-for-font-color-red-pennywise-font" title="Permalink to this headline">¶</a></h3>
+<p>Now it’s time for a more nuanced approach.
+Most of the comments are not simply ‘Pennywise’ or ‘The joker’. Users typically like to express their opinion when commenting their verdict. So we’ll fetch strings which contain set phrases. These phrases attempt to capture the sentiment of who the commenter thought won within their comments. <br>
+The phrases we’ll look for contain <br></p>
+<ul class="simple">
+<li><p>Pennywise/The Joker</p></li>
+<li><p>won/wins/winner<br />
+<br></p></li>
+</ul>
+<p>For example, a comment that reads: &gt; ‘They were both amazing, but I think The Joker won.’</p>
+<p>We will recognise this as a Joker supportive comment with the substring ‘Joker won’.
+<br>
+An example phrase we wouldn’t recognise is: &gt; ‘Close call, Though I think Pennywise clenched the victory.’</p>
+<p>While this is explicitly a pro-Pennywise verdict. The substrings we’re looking for wouldn’t pick up this comment.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Find any comment with the following substrings </span>
+<span class="c1"># &#39;Pennywise won&#39;, &#39;Pennywise wins&#39;, &#39;Pennywise winner&#39;, &#39;IT won&#39;, &#39;IT wins&#39;, &#39;IT winner&#39;, &#39;pennywise won&#39;</span>
+<span class="c1"># &#39;pennywise wins&#39;, &#39;pennywise winner&#39;, &#39;winner: pennywise&#39;, &#39;winner: Pennywise&#39;</span>
+<span class="n">PW_comments</span> <span class="o">=</span> <span class="n">JvP_df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Pennywise won|Pennywise wins|Pennywise winner|IT won|IT wins|IT winner|pennywise won|pennywise wins|pennywise winner|winner: pennywise|winner: Pennywise|penny wise won|penny wise wins|penny wise winner|Penny wise won|Penny wise wins|Penny wise winner&#39;</span><span class="p">))</span>
+<span class="n">PW_comments_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">PW_comments</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">PW_comments</span> <span class="o">=</span> <span class="n">JvP_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">PW_comments_index</span><span class="p">,</span><span class="n">PW_rows</span><span class="p">),[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">PW_comments</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>16</td>
+      <td>Pennywise won</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>Penny wise won ^^</td>
+    </tr>
+    <tr>
+      <td>151</td>
+      <td>Pennywise won, but he's going to have to limp ...</td>
+    </tr>
+    <tr>
+      <td>161</td>
+      <td>Pennywise won</td>
+    </tr>
+    <tr>
+      <td>163</td>
+      <td>The Edgar Allen Poe reference was amazing... P...</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>89221</td>
+      <td>Pennywise.</td>
+    </tr>
+    <tr>
+      <td>94051</td>
+      <td>Pennywise.</td>
+    </tr>
+    <tr>
+      <td>2821</td>
+      <td>pennywise.</td>
+    </tr>
+    <tr>
+      <td>51957</td>
+      <td>Penny wise.</td>
+    </tr>
+    <tr>
+      <td>86912</td>
+      <td>Penny wise.</td>
+    </tr>
+  </tbody>
+</table>
+<p>2948 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#&#39;Joker won&#39;,&#39;Joker wins&#39;,&#39;Joker winner&#39;,&#39;joker won&#39;,&#39;joker wins&#39;,&#39;joker winner&#39;,&#39;winner: Joker&#39;,&#39;winner: joker&#39;</span>
+<span class="n">JK_comments</span> <span class="o">=</span> <span class="n">JvP_df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Joker won|Joker wins|Joker winner|joker won|joker wins|joker winner|winner: Joker|winner: joker&#39;</span><span class="p">))</span>
+<span class="n">JK_comments_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">JK_comments</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">JK_comments</span> <span class="o">=</span> <span class="n">JvP_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">JK_comments_index</span><span class="p">,</span><span class="n">JK_rows</span><span class="p">),[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">JK_comments</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12</td>
+      <td>Joker won</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>Is probably the best one yet. I think joker won.</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td>Joker won!!!!!</td>
+    </tr>
+    <tr>
+      <td>59</td>
+      <td>joker won</td>
+    </tr>
+    <tr>
+      <td>62</td>
+      <td>I like pennywise but joker was really good so ...</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>86093</td>
+      <td>Joker.</td>
+    </tr>
+    <tr>
+      <td>89958</td>
+      <td>Joker.</td>
+    </tr>
+    <tr>
+      <td>60678</td>
+      <td>The joker.</td>
+    </tr>
+    <tr>
+      <td>83404</td>
+      <td>The joker.</td>
+    </tr>
+    <tr>
+      <td>62133</td>
+      <td>The Joker.</td>
+    </tr>
+  </tbody>
+</table>
+<p>6316 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_JKrows</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">JK_comments_index</span><span class="p">,</span> <span class="n">JK_rows</span><span class="p">)</span>
+<span class="n">all_PWrows</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">PW_comments_index</span><span class="p">,</span> <span class="n">PW_rows</span><span class="p">)</span>
+
+<span class="n">PW_df</span> <span class="o">=</span> <span class="n">JvP_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">all_PWrows</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+<span class="n">JK_df</span> <span class="o">=</span> <span class="n">JvP_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">all_JKrows</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+<span class="c1">## what the Joker supportive comments look like in context of whole dataset </span>
+<span class="c1">#JK_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## what Pennywise supportive comments look like in context of whole dataset </span>
+<span class="c1">#PW_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># removing duplicate commentors from supportive comments for each candidate </span>
+<span class="n">JK_df</span> <span class="o">=</span> <span class="n">JK_df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="s1">&#39;Author&#39;</span><span class="p">,</span> <span class="n">keep</span> <span class="o">=</span> <span class="s1">&#39;first&#39;</span><span class="p">)</span>
+<span class="n">JK_df</span>
+<span class="c1"># going from 6316 rows to </span>
+<span class="c1"># 6216 rows. 100 duplicate commentors subtracted. </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Comment</th>
+      <th>Author</th>
+      <th>Posted</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12</td>
+      <td>Joker won</td>
+      <td>Proe1</td>
+      <td>1 day ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>Is probably the best one yet. I think joker won.</td>
+      <td>Brandon Harris</td>
+      <td>5 days ago</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td>Joker won!!!!!</td>
+      <td>Mathew Kennedy</td>
+      <td>4 days ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>59</td>
+      <td>joker won</td>
+      <td>Clout God</td>
+      <td>4 days ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>62</td>
+      <td>I like pennywise but joker was really good so ...</td>
+      <td>weeeeeeeee are the beest</td>
+      <td>3 days ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>86093</td>
+      <td>Joker.</td>
+      <td>Matthew S</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>89958</td>
+      <td>Joker.</td>
+      <td>Alex Ortiz</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>60678</td>
+      <td>The joker.</td>
+      <td>Aurora Rose</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>83404</td>
+      <td>The joker.</td>
+      <td>Zack</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>62133</td>
+      <td>The Joker.</td>
+      <td>Akhil Mathew George</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>6216 rows × 4 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pennywise data, going from 2948 </span>
+<span class="n">PW_df</span> <span class="o">=</span> <span class="n">PW_df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="s1">&#39;Author&#39;</span><span class="p">,</span> <span class="n">keep</span> <span class="o">=</span> <span class="s1">&#39;first&#39;</span><span class="p">)</span>
+<span class="n">PW_df</span>
+<span class="c1"># to 2892</span>
+<span class="c1"># 56 duplicate comments dropped. </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Comment</th>
+      <th>Author</th>
+      <th>Posted</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>16</td>
+      <td>Pennywise won</td>
+      <td>YT Rapido</td>
+      <td>15 hours ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>Penny wise won ^^</td>
+      <td>Muhammedlee</td>
+      <td>5 days ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>151</td>
+      <td>Pennywise won, but he's going to have to limp ...</td>
+      <td>OtterWithAGun</td>
+      <td>1 week ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>161</td>
+      <td>Pennywise won</td>
+      <td>Converse Montana</td>
+      <td>1 week ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>163</td>
+      <td>The Edgar Allen Poe reference was amazing... P...</td>
+      <td>CS Hill</td>
+      <td>1 week ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>89221</td>
+      <td>Pennywise.</td>
+      <td>Relics</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>94051</td>
+      <td>Pennywise.</td>
+      <td>Bababouille</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2821</td>
+      <td>pennywise.</td>
+      <td>Sandra Spurlock</td>
+      <td>5 months ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>51957</td>
+      <td>Penny wise.</td>
+      <td>Jalen Hyman</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>86912</td>
+      <td>Penny wise.</td>
+      <td>wasfapuk1 112</td>
+      <td>1 year ago</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>2892 rows × 4 columns</p>
+</div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="who-won">
+<h1>WHO WON?!<a class="headerlink" href="#who-won" title="Permalink to this headline">¶</a></h1>
+<p>We’re about to find out!
+Totalling all comments for both contestants while removing duplicates.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span><span class="p">;</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcdefaults</span><span class="p">()</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">contestants</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;The Joker&#39;</span><span class="p">,</span><span class="s1">&#39;Pennywise&#39;</span><span class="p">)</span>
+<span class="n">votes</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">JK_df</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">PW_df</span><span class="p">)]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">contestants</span><span class="p">,</span> <span class="n">votes</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;#AA36EC&#39;</span><span class="p">,</span><span class="s1">&#39;#BF012C&#39;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Votes&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;ERB: The Joker vs Pennywise&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;ERB: The Joker vs Pennywise&#39;)
+</pre></div>
+</div>
+<img alt="_images/Joker_vs_Pennywise_Final2_15_1.png" src="_images/Joker_vs_Pennywise_Final2_15_1.png" />
+</div>
+</div>
+<div class="section" id="font-color-purple-the-joker-won-font">
+<h2><font color=purple><strong>The Joker Won</strong></font><a class="headerlink" href="#font-color-purple-the-joker-won-font" title="Permalink to this headline">¶</a></h2>
+<p>With <strong>6,216 comments</strong> for <font color=purple><strong>The Joker</strong></font>  vs <strong>2,892 comments</strong> for <font color=red><strong>Pennywise</strong>.</font> <br>
+The Joker received 115% more votes than Pennywise.</p>
+<div class="section" id="next-we-can-look-at-how-many-upvotes-these-comments-have">
+<h3>Next we can look at how many upvotes these comments have.<a class="headerlink" href="#next-we-can-look-at-how-many-upvotes-these-comments-have" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Tallying upvotes on comments supportive for Joker &amp; Pennywise. </span>
+<span class="c1"># Joker has two comments with 4K and 2.8K upvotes. </span>
+<span class="n">JvP_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">8344</span><span class="p">,:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Comment    Joker won this, but the actor who played Penny...
+Author                                    GrapplingIgnorance
+Posted                                          9 months ago
+Votes                                                     4K
+Name: 8344, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">JvP_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">14394</span><span class="p">,:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Comment    Joker wins this because if and when he dies, h...
+Author                                               Shageru
+Posted                                            1 year ago
+Votes                                                   2.8K
+Name: 14394, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">JK_votes</span> <span class="o">=</span> <span class="n">JK_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">JK_votes</span> <span class="o">=</span> <span class="n">JK_votes</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="c1">#JK_votes.index(&#39;K&#39;)</span>
+<span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">JK_votes</span> <span class="k">if</span> <span class="s1">&#39;K&#39;</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span>
+<span class="c1">#JK_votes.index(&#39;4K&#39;) #441</span>
+<span class="c1">#JK_votes.index(&#39;2.8K&#39;) #751</span>
+<span class="n">indices</span> <span class="o">=</span> <span class="mi">441</span><span class="p">,</span> <span class="mi">751</span>
+<span class="n">JK_votes</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">JK_votes</span><span class="p">)</span> <span class="k">if</span> <span class="n">j</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">]</span>
+<span class="n">JK_votes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">JK_votes</span><span class="p">))</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">JK_votes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>29672
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PW_votes</span> <span class="o">=</span> <span class="n">PW_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">PW_votes</span> <span class="o">=</span> <span class="n">PW_votes</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">PW_votes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">PW_votes</span><span class="p">))</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">PW_votes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2272
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contestants</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;The Joker&#39;</span><span class="p">,</span><span class="s1">&#39;Pennywise&#39;</span><span class="p">)</span>
+<span class="c1"># add the 4K and 2.8K to Joker</span>
+<span class="n">JK_votes2</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">JK_votes</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4000</span> <span class="o">+</span> <span class="mi">2800</span>
+<span class="n">PW_votes2</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">PW_votes</span><span class="p">)</span>
+<span class="n">votes2</span> <span class="o">=</span> <span class="p">[</span><span class="n">JK_votes2</span><span class="p">,</span><span class="n">PW_votes2</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">contestants</span><span class="p">,</span> <span class="n">votes2</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;#AA36EC&#39;</span><span class="p">,</span><span class="s1">&#39;#BF012C&#39;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Upvotes on supportive comments&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;ERB: The Joker vs Pennywise&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;ERB: The Joker vs Pennywise&#39;)
+</pre></div>
+</div>
+<img alt="_images/Joker_vs_Pennywise_Final2_22_1.png" src="_images/Joker_vs_Pennywise_Final2_22_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-font-color-purple-the-joker-font-comments-received-substantially-more-upvotes-than-font-color-red-pennywise-font-comments">
+<h2>The <font color=purple><strong>The Joker</strong></font>comments received substantially more upvotes than <font color=red><strong>Pennywise</strong></font> comments<a class="headerlink" href="#the-font-color-purple-the-joker-font-comments-received-substantially-more-upvotes-than-font-color-red-pennywise-font-comments" title="Permalink to this headline">¶</a></h2>
+<p>Around <strong>1,206%</strong> more upvotes in total.</p>
+</div>
+</div>
+<div class="section" id="who-s-next">
+<h1>WHO’S NEXT?!<a class="headerlink" href="#who-s-next" title="Permalink to this headline">¶</a></h1>
+<p>Now let’s try shed some light as to who the commenters wanted featured in future ERB videos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># capturing all comments with &#39;Vs&#39;,&#39;VS&#39;,&#39;vs&#39; as substrings</span>
+<span class="n">VS_comments</span> <span class="o">=</span> <span class="n">JvP_df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;vs|Vs|VS&#39;</span><span class="p">))</span>
+<span class="n">VS_comments_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">VS_comments</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">VS_comments</span> <span class="o">=</span> <span class="n">JvP_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">VS_comments_index</span><span class="p">,[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">VS_comments</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>Do Spider-Man vs green goblin</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Batman vs flash</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>That wouldn't make any sense, green goblin vs ...</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>Jigsaw Vs Joker. I'd love to see that one go d...</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>Plz Abraham Lincoln vs George Washington</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>95855</td>
+      <td>Kevin from home alone vs jigsaw</td>
+    </tr>
+    <tr>
+      <td>95868</td>
+      <td>The clown prince of crime vs the red ballonest</td>
+    </tr>
+    <tr>
+      <td>95873</td>
+      <td>Mr Bean vs Jim Carrey</td>
+    </tr>
+    <tr>
+      <td>95883</td>
+      <td>CHARLEMAGNE VS BISMARK</td>
+    </tr>
+    <tr>
+      <td>95894</td>
+      <td>Karl Marx vs Adam Smith</td>
+    </tr>
+  </tbody>
+</table>
+<p>17306 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cross-tabulate the votes for next combatants</span>
+<span class="n">VS_tab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">JvP_comments</span><span class="p">[</span><span class="n">VS_comments_index</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">margins</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">VS_tab</span> <span class="o">=</span> <span class="n">VS_tab</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">VS_tab</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>col_0</th>
+      <th>Count</th>
+      <th>All</th>
+    </tr>
+    <tr>
+      <th>Comment</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>All</td>
+      <td>17306</td>
+      <td>17306</td>
+    </tr>
+    <tr>
+      <td>Messi vs Ronaldo</td>
+      <td>15</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Thanos vs Darkseid</td>
+      <td>14</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>John Wick vs Agent 47</td>
+      <td>13</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>Batman vs superman</td>
+      <td>11</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>Chucky vs Annabelle</td>
+      <td>9</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>Batman vs iron man</td>
+      <td>9</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>Homer Simpson vs Peter Griffin</td>
+      <td>9</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>Indiana Jones vs Han Solo</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Karl Marx vs Adam Smith</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>John Wick vs Neo</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>https://youtu.be/5VfpX6vsfMc</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Agent 47 vs John Wick</td>
+      <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Mario vs sonic</td>
+      <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Batman vs Ironman</td>
+      <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Ironman vs Batman</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Harry Potter vs Luke Skywalker</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Ronaldo vs Messi</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Han Solo vs Star Lord</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>El Chapo vs Pablo Escobar</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Looked at it in this way, Messi and Ronaldo appear the most requested. However, We have various iterations of Batman vs Ironman. Such as Batman vs Ironman (7) + Batman vs iron man (9) + Ironman vs Batman (6) = 22. Perhaps another way to address this question</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">VS_comments</span> <span class="o">=</span> <span class="n">JvP_comments</span><span class="p">[</span><span class="n">VS_comments_index</span><span class="p">]</span>
+
+<span class="c1"># Mentions of Batman as a contestant </span>
+<span class="n">batman</span> <span class="o">=</span> <span class="n">VS_comments</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Batman|batman&#39;</span><span class="p">)</span>
+<span class="n">batman_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">batman</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1">#batman_index</span>
+
+<span class="c1"># Mentions of John Wick as a contestant </span>
+<span class="n">JW</span> <span class="o">=</span> <span class="n">VS_comments</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;John wick|john wick|John Wick&#39;</span><span class="p">)</span>
+<span class="n">JW_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">JW</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Mentions of Agent 47 as a contestant </span>
+<span class="n">A47</span> <span class="o">=</span> <span class="n">VS_comments</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Agent 47|Agent47|agent 47|agent 47&#39;</span><span class="p">)</span>
+<span class="n">A47_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">A47</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Mentions of Superman as a contestant</span>
+<span class="n">SM</span> <span class="o">=</span> <span class="n">VS_comments</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Superman|superman|Super man|super man&#39;</span><span class="p">)</span>
+<span class="n">SM_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">SM</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Mentions of Spiderman as a contestant</span>
+<span class="n">Spi</span> <span class="o">=</span> <span class="n">VS_comments</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Spiderman|spiderman|Spider man|spider man&#39;</span><span class="p">)</span>
+<span class="n">Spi_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">Spi</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Mentions of Ironman as a contestant</span>
+<span class="n">IM</span> <span class="o">=</span> <span class="n">VS_comments</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Ironman|ironman|Iron man|iron man&#39;</span><span class="p">)</span>
+<span class="n">IM_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">IM</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Mentions of Messi (footballer) as a contestant</span>
+<span class="n">mes</span> <span class="o">=</span> <span class="n">VS_comments</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Messi|messi&#39;</span><span class="p">)</span>
+<span class="n">mes_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mes</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Mentions of Ronaldo (footballer) as a contestant</span>
+<span class="n">Ron</span> <span class="o">=</span> <span class="n">VS_comments</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Ronaldo|ronaldo&#39;</span><span class="p">)</span>
+<span class="n">Ron_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">Ron</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Mentions of Sonic (the Hedgehog) as a contestant</span>
+<span class="n">Son</span> <span class="o">=</span> <span class="n">VS_comments</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Sonic|sonic&#39;</span><span class="p">)</span>
+<span class="n">Son_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">Son</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Mentions of Mario (Nintendo, Plumber) as a contestant</span>
+<span class="n">Mar</span> <span class="o">=</span> <span class="n">VS_comments</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Mario|Mario&#39;</span><span class="p">)</span>
+<span class="n">Mar_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">Mar</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">next_contestants</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Batman&#39;</span><span class="p">,</span><span class="s1">&#39;John wick&#39;</span><span class="p">,</span><span class="s1">&#39;Agent 47&#39;</span><span class="p">,</span><span class="s1">&#39;Ironman&#39;</span><span class="p">,</span><span class="s1">&#39;Superman&#39;</span><span class="p">,</span><span class="s1">&#39;Spiderman&#39;</span><span class="p">,</span><span class="s1">&#39;Sonic&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;Messi&#39;</span><span class="p">,</span><span class="s1">&#39;Ronaldo&#39;</span><span class="p">,</span><span class="s1">&#39;Mario (Nintendo)&#39;</span><span class="p">)</span>
+<span class="n">bat_votes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">batman_index</span><span class="p">)</span>
+<span class="n">JW_votes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">JW_index</span><span class="p">)</span>
+<span class="n">A47_votes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A47_index</span><span class="p">)</span>
+<span class="n">IM_votes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">IM_index</span><span class="p">)</span>
+<span class="n">SM_votes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">SM_index</span><span class="p">)</span>
+<span class="n">Spi_votes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Spi_index</span><span class="p">)</span>
+<span class="n">Sonic_votes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Son_index</span><span class="p">)</span>
+<span class="n">Mario_votes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Mar_index</span><span class="p">)</span>
+<span class="n">Messi_votes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mes_index</span><span class="p">)</span>
+<span class="n">Ronaldo_votes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Ron_index</span><span class="p">)</span>
+
+<span class="n">mentions</span> <span class="o">=</span> <span class="p">[</span><span class="n">bat_votes</span><span class="p">,</span> <span class="n">JW_votes</span><span class="p">,</span><span class="n">A47_votes</span><span class="p">,</span> <span class="n">IM_votes</span><span class="p">,</span> <span class="n">SM_votes</span><span class="p">,</span> <span class="n">Spi_votes</span><span class="p">,</span> <span class="n">Sonic_votes</span><span class="p">,</span> <span class="n">Messi_votes</span><span class="p">,</span> <span class="n">Ronaldo_votes</span><span class="p">,</span><span class="n">Mario_votes</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">next_contestants</span><span class="p">,</span> <span class="n">mentions</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Mentions&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;ERB: The Joker vs Pennywise - Who</span><span class="se">\&#39;</span><span class="s1">s next!? You decide!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &quot;ERB: The Joker vs Pennywise - Who&#39;s next!? You decide!&quot;)
+</pre></div>
+</div>
+<img alt="_images/Joker_vs_Pennywise_Final2_29_1.png" src="_images/Joker_vs_Pennywise_Final2_29_1.png" />
+</div>
+</div>
+<div class="section" id="based-on-this-batman-is-the-most-popular-contestant-br">
+<h2>Based on this, Batman is the most popular contestant. <br><a class="headerlink" href="#based-on-this-batman-is-the-most-popular-contestant-br" title="Permalink to this headline">¶</a></h2>
+<p>However, he’s already featured in an ERB vs Sherlock :<a class="reference external" href="https://www.youtube.com/watch?v=17CLlZuiBkQ">https://www.youtube.com/watch?v=17CLlZuiBkQ</a>. <br>
+So next in line is <strong>John Wick</strong>. <br>
+Who might he be facing?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np_df</span> <span class="o">=</span> <span class="n">VS_comments</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">()</span>
+<span class="n">JWvs</span> <span class="o">=</span> <span class="n">np_df</span><span class="p">[</span><span class="n">JW_index</span><span class="p">]</span>
+<span class="n">JW_tab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">JWvs</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">margins</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">JW_tab</span> <span class="o">=</span> <span class="n">JW_tab</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">JW_tab</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/ipykernel_launcher.py:1: FutureWarning: Method .as_matrix will be removed in a future version. Use .values instead.
+  &quot;&quot;&quot;Entry point for launching an IPython kernel.
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>col_0</th>
+      <th>Count</th>
+      <th>All</th>
+    </tr>
+    <tr>
+      <th>row_0</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>All</td>
+      <td>427</td>
+      <td>427</td>
+    </tr>
+    <tr>
+      <td>John Wick vs Agent 47</td>
+      <td>13</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>John Wick vs Neo</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Agent 47 vs John Wick</td>
+      <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>John wick vs agent 47</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>John Wick vs Hitman</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>John wick vs Agent 47</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>John wick vs Rambo</td>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>John Wick vs Rambo</td>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Rambo vs John Wick</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>You should do John wick vs James Bond</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Agent 47 vs. John Wick</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>John Wick vs Chuck Norris</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>John Wick vs Jason Bourne</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>John Wick vs John Rambo</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Well. It looks like <br></p>
+<ul class="simple">
+<li><p><strong>Agent 47</strong> from the Hitman franchise <em>(total: 32)</em></p></li>
+<li><p><strong>John Rambo</strong> <em>(total: 14)</em></p></li>
+</ul>
+<p>I can already see NicePeter as naturally playing the role of John Wick and EpicLLOYD would make an amazing Agent 47 or John Rambo. <br>
+No matter who the wonderful folk at ERB choose to do in their rap battles, it will be awesome as always. <br></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
